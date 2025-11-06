@@ -1,0 +1,23 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+.env
+.env.local
+*.local
+
+# Build outputs
+build/
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Chrome extension package
+*.zip
+*.crx
+*.pem
