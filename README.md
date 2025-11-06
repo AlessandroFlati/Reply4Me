@@ -2,13 +2,20 @@
 
 A Chrome extension that uses configurable LLM providers (OpenAI, Claude, Gemini) to intelligently fill out web forms. The extension detects form fields, sends questions to your chosen AI model, and presents suggested answers in an easy-to-use modal interface.
 
+## 🚀 Getting Started
+
+**New here? Read [START_HERE.md](START_HERE.md) first!**
+
+Then follow the [Developer Guide](DEVELOPER_GUIDE.md) for complete setup instructions.
+
 ## 📚 Documentation
 
-- **[Developer Guide](DEVELOPER_GUIDE.md)** - Complete installation and setup guide (START HERE!)
-- **[Quick Start](QUICKSTART.md)** - Get running in 5 minutes
-- **[Setup Guide](SETUP.md)** - Detailed development setup
-- **[Contributing](CONTRIBUTING.md)** - How to contribute
-- **[Project Summary](PROJECT_SUMMARY.md)** - Technical overview
+- **[START_HERE.md](START_HERE.md)** ⭐ New to the project? Start here!
+- **[DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md)** - Complete installation and setup guide
+- **[QUICKSTART.md](QUICKSTART.md)** - Get running in 5 minutes
+- **[SETUP.md](SETUP.md)** - Detailed development setup
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - How to contribute
+- **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Technical overview
 
 ## Features
 
