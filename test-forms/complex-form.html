@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Test Form - Reply4Me</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #f5f7fa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .intro {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #3498db;
+        }
+        .form-section {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #34495e;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .required {
+            color: #e74c3c;
+        }
+        .help-text {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 4px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 25px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Application Form</h1>
+
+        <div class="intro">
+            <strong>🧪 Complex Test Form for Reply4Me</strong><br>
+            This form has multiple sections and field types to thoroughly test the extension.
+            Try using Reply4Me to automatically fill this entire application!
+        </div>
+
+        <form id="jobForm">
+            <!-- Personal Information -->
+            <div class="form-section">
+                <h2>Personal Information</h2>
+
+                <div class="form-row">
+                    <div>
+                        <label for="firstName">
+                            First Name <span class="required">*</span>
+                        </label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div>
+                        <label for="lastName">
+                            Last Name <span class="required">*</span>
+                        </label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <label for="email">
+                    Email Address <span class="required">*</span>
+                </label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">
+                    Phone Number <span class="required">*</span>
+                </label>
+                <input type="tel" id="phone" name="phone" required>
+                <div class="help-text">Include country code if applicable</div>
+
+                <label for="location">
+                    Current Location <span class="required">*</span>
+                </label>
+                <input type="text" id="location" name="location" required placeholder="City, Country">
+
+                <label for="linkedin">
+                    LinkedIn Profile URL
+                </label>
+                <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+
+                <label for="portfolio">
+                    Portfolio/Website URL
+                </label>
+                <input type="url" id="portfolio" name="portfolio" placeholder="https://yourportfolio.com">
+            </div>
+
+            <!-- Professional Experience -->
+            <div class="form-section">
+                <h2>Professional Experience</h2>
+
+                <label for="currentPosition">
+                    Current Job Title <span class="required">*</span>
+                </label>
+                <input type="text" id="currentPosition" name="currentPosition" required>
+
+                <label for="currentCompany">
+                    Current Company
+                </label>
+                <input type="text" id="currentCompany" name="currentCompany">
+
+                <label for="experience">
+                    Years of Experience <span class="required">*</span>
+                </label>
+                <select id="experience" name="experience" required>
+                    <option value="">Select...</option>
+                    <option value="0-1">0-1 years</option>
+                    <option value="1-3">1-3 years</option>
+                    <option value="3-5">3-5 years</option>
+                    <option value="5-10">5-10 years</option>
+                    <option value="10+">10+ years</option>
+                </select>
+
+                <label for="skills">
+                    Key Skills <span class="required">*</span>
+                </label>
+                <textarea id="skills" name="skills" required placeholder="List your main technical and soft skills"></textarea>
+                <div class="help-text">Separate skills with commas</div>
+
+                <label for="achievements">
+                    Major Achievements
+                </label>
+                <textarea id="achievements" name="achievements" placeholder="Describe your most significant professional accomplishments"></textarea>
+            </div>
+
+            <!-- Position Details -->
+            <div class="form-section">
+                <h2>Position Details</h2>
+
+                <label for="positionApplying">
+                    Position Applying For <span class="required">*</span>
+                </label>
+                <select id="positionApplying" name="positionApplying" required>
+                    <option value="">Select position...</option>
+                    <option value="frontend">Frontend Developer</option>
+                    <option value="backend">Backend Developer</option>
+                    <option value="fullstack">Full Stack Developer</option>
+                    <option value="mobile">Mobile Developer</option>
+                    <option value="devops">DevOps Engineer</option>
+                    <option value="designer">UI/UX Designer</option>
+                    <option value="product">Product Manager</option>
+                </select>
+
+                <label for="availability">
+                    When Can You Start? <span class="required">*</span>
+                </label>
+                <select id="availability" name="availability" required>
+                    <option value="">Select...</option>
+                    <option value="immediately">Immediately</option>
+                    <option value="2weeks">2 weeks notice</option>
+                    <option value="1month">1 month notice</option>
+                    <option value="flexible">Flexible</option>
+                </select>
+
+                <label for="workType">
+                    Preferred Work Arrangement <span class="required">*</span>
+                </label>
+                <select id="workType" name="workType" required>
+                    <option value="">Select...</option>
+                    <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="onsite">On-site</option>
+                    <option value="any">Any</option>
+                </select>
+
+                <label for="salary">
+                    Expected Salary Range <span class="required">*</span>
+                </label>
+                <input type="text" id="salary" name="salary" required placeholder="e.g., $80,000 - $100,000">
+
+                <label for="relocate">
+                    Willing to Relocate?
+                </label>
+                <select id="relocate" name="relocate">
+                    <option value="">Select...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="depends">Depends on location</option>
+                </select>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="form-section">
+                <h2>Additional Information</h2>
+
+                <label for="motivation">
+                    Why do you want to join our company? <span class="required">*</span>
+                </label>
+                <textarea id="motivation" name="motivation" required placeholder="Tell us what excites you about this opportunity"></textarea>
+
+                <label for="questions">
+                    Do you have any questions for us?
+                </label>
+                <textarea id="questions" name="questions" placeholder="Ask us anything about the role or company"></textarea>
+
+                <label for="referral">
+                    How did you hear about us?
+                </label>
+                <select id="referral" name="referral">
+                    <option value="">Select...</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="indeed">Indeed</option>
+                    <option value="referral">Employee Referral</option>
+                    <option value="website">Company Website</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('jobForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Application submitted! (Test only - no data sent)');
+            console.log('Form submitted successfully');
+        });
+    </script>
+</body>
+</html>
